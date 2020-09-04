@@ -25,16 +25,7 @@ describe Character do
     expect(niles.show).to eq(frasier)
   end
 
-  it "has a catchphrase" do
-    
-    urkel = Character.new(name: "Steve Urkel")
-    urkel.catchphrase = "Did I do that?"
-    urkel.save
-    expect(Character.find_by(id: urkel.id).catchphrase).to eq(urkel.catchphrase)
-
-    expect(urkel.say_that_thing_you_say).to eq("#{urkel.name} always says: #{urkel.catchphrase}")
-
-  end
+  
 
   it "can build its associated show" do
     jules_cobb = Character.new(name: "Jules Cobb")
