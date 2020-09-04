@@ -42,14 +42,7 @@ describe Show do
     expect(show.characters.count).to eq(1)
   end
 
-  it "should have a genre" do
-    show.name = "Gilmore Girls"
-    show.genre = "Dramedy"
-    show.save
-    dramedy = Show.find_by(:genre => "Dramedy")
-    expect(dramedy.name).to eq("Gilmore Girls")
-  end
-
+  
    it "can build an associated network" do
     show.build_network(:call_letters => "NBC")
     expect(show.network.call_letters).to eq("NBC")
